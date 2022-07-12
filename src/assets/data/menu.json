@@ -1,0 +1,16 @@
+[
+    {
+        "nombre": "Inicio",
+        "redirect": "/dashboard"
+    },
+
+    {
+        "nombre": "Personas",
+        "redirect": "/dashboard/personas"
+    },
+    {
+        "nombre": "Tarjetas",
+        "redirect": "/dashboard/tarjetas"
+    }
+    
+]

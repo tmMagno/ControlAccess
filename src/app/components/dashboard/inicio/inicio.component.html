@@ -1,0 +1,46 @@
+<div class="container">
+    
+        <mat-toolbar>
+          <span>Ingresos del día</span>
+         
+          
+        </mat-toolbar>
+
+
+<!-- ATENCION, ACA estan lo nombres de las columnas, tienen que HACER MACH con los nombres que figuran en inicio.components.ts -->
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          
+            <!-- Position Column -->
+            <ng-container matColumnDef="socio">
+              <th mat-header-cell *matHeaderCellDef> No. Socio </th>
+              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="nombre">
+              <th mat-header-cell *matHeaderCellDef> Nombre </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="apellido">
+              <th mat-header-cell *matHeaderCellDef> Apellido </th>
+              <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+            </ng-container>
+          
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="estado">
+              <th mat-header-cell *matHeaderCellDef> Estado </th>
+              <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          <br>
+          <div class="example-spacer">
+            <button mat-raised-button color="primary">Importar</button>
+          </div>
+</div>
+
+

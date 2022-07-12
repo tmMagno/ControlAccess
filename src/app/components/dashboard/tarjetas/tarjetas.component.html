@@ -1,0 +1,41 @@
+<div class="container">
+  
+  <mat-toolbar>
+    <span>Nuevo Socio</span>
+  </mat-toolbar>
+  
+  <mat-grid-list cols="5"rowHeight="70px">
+    <mat-grid-tile  [colspan]="2" [rowspan]="1" >
+        <mat-form-field class="ancho">
+          <mat-label>Tipo de Dispositivo</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let item of tDispo" [value]="item">
+                {{item}}
+              </mat-option>
+             </mat-select>
+        </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile  [colspan]="3" [rowspan]="4" >
+      img
+    </mat-grid-tile>
+    <mat-grid-tile  [colspan]="2" [rowspan]="1"  >
+      <mat-form-field appearance="fill" class="ancho">
+        <mat-label>ID Carnet</mat-label>
+        <input matInput autocomplete="off">
+      </mat-form-field>
+    </mat-grid-tile>
+   
+    <mat-grid-tile  [colspan]="2" [rowspan]="1" >
+      <mat-form-field appearance="fill" class="ancho" >
+        <mat-label>Observaciones</mat-label>
+        <input matInput autocomplete="off">
+      </mat-form-field>
+    </mat-grid-tile>
+  </mat-grid-list>
+ <br>
+ <button mat-raised-button color="primary" style="margin-right: 5px;">Continuar</button>
+ <button mat-raised-button color="warn">Cancelar</button>
+
+<br>
+<br>
+</div>
